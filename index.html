@@ -58,20 +58,25 @@ cursor:pointer;
 }
 
 #surprise{
-display:none;
-margin-top:20px;
-animation:fadeIn 1s ease;
+    display:none;
+    margin-top:20px;
+    opacity:0;
+}
+
+.show-surprise{
+    display:block !important;
+    animation:fadeIn 1.5s forwards;
 }
 
 @keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 .footer{
@@ -91,7 +96,7 @@ opacity:0.9;
 <h1>🎂 Happy Birthday 🎂</h1>
 
 <p>
-A small surprise created especially for you 😊
+A small surprise especially for you 😊
 </p>
 
 <button onclick="showSurprise()">
@@ -100,7 +105,7 @@ Open Me ✨
 
 <div id="surprise">
 
-<h2><<Dear Bandana>></h2>
+<h2>Dear Bandana,</h2>
 
 <br>
 
@@ -109,34 +114,30 @@ Wishing you a very Happy Birthday! 🎉
 </p>
 
 <p>
-May your day be filled with happiness,
-laughter, beautiful memories, and everything
-that brings a smile to your face.
+I hope this year brings you lots of happiness, peace, good health and some beautiful memories. May you get everything you’ve been wishing for.
 </p>
 
 <p>
 Although we've only recently connected,
 I'm genuinely glad our paths crossed.
 It’s actually been really nice getting to know you — the random conversations, 
-    late-night talks, food discussions, work stuff, plans discussed 😂… 
-    and all the little things in between.
+late-night talks, food discussions, work stuff, plans discussed 😂… 
+and all the little things in between.
 I wanted to make <strong>your special day</strong> a little more memorable
 with this small surprise.
 </p>
 
 <p>
-May this year bring you good health,
-success, new adventures, and countless
-reasons to smile.
+May you get everything you’ve been quietly wishing for, and hopefully a lot more reasons to smile along the way. 😊
 </p>
 
 <p>
 Enjoy your special day and make
-wonderful memories today. ✨
+wonderful memories today. 
 </p>
 
 <div class="footer">
-"Some birthdays deserve more than just a message." 💖
+"Some birthdays deserve more than just a message."✨
 </div>
 
 </div>
@@ -151,16 +152,28 @@ music.mp3
 
 function showSurprise(){
 
-document.getElementById("surprise").style.display = "block";
+    const btn = document.getElementById("openBtn");
 
-const music = document.getElementById("bgMusic");
+    // Fade out button
+    btn.classList.add("fade-out");
 
-music.volume = 0.35;
+    // Hide button completely after animation
+    setTimeout(() => {
+        btn.style.display = "none";
 
-music.play().catch(err=>{
-console.log(err);
-});
+        // Show the surprise message
+        document.getElementById("surprise").classList.add("show-surprise");
+        
+    }, 800);
 
+    // Play music
+    const music = document.getElementById("bgMusic");
+
+    music.volume = 0.35;
+
+    music.play().catch(err => {
+        console.log(err);
+    });
 }
 
 </script>

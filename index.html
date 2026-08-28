@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Birthday Surprise</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 🎂</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+.container{
+    padding:80px 20px;
+}
+
+h1{
+    font-size:3.5rem;
+    animation:fadeIn 2s;
+}
+
+.message{
+    max-width:700px;
+    margin:auto;
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+button{
+    margin-top:25px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:#fff;
+    color:#ff4d6d;
+    font-size:18px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#surprise{
+    display:none;
+    margin-top:30px;
+    background:rgba(255,255,255,0.15);
+    padding:25px;
+    border-radius:20px;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+}
+</style>
 </head>
+
 <body>
-    <h1>🎂 Happy Birthday! 🎉</h1>
-    <p>If you can see this page, GitHub Pages is working!</p>
-</body>
-</html>
+
+<div class="container">
+
+<h1>🎂 

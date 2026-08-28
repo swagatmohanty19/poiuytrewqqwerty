@@ -1,65 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday 🎂</title>
+<title>Birthday Surprise</title>
 
 <style>
 body{
-    margin:0;
-    font-family:'Segoe UI',sans-serif;
-    background:linear-gradient(135deg,#ff758c,#ff7eb3);
-    color:white;
+    background:#ff7eb3;
+    font-family:Arial,sans-serif;
     text-align:center;
-    overflow-x:hidden;
-}
-
-.container{
-    padding:80px 20px;
-}
-
-h1{
-    font-size:3.5rem;
-    animation:fadeIn 2s;
-}
-
-.message{
-    max-width:700px;
-    margin:auto;
-    font-size:1.2rem;
-    line-height:1.8;
+    color:white;
+    padding-top:100px;
 }
 
 button{
-    margin-top:25px;
-    padding:15px 30px;
+    padding:15px 25px;
     border:none;
-    border-radius:30px;
-    background:#fff;
-    color:#ff4d6d;
+    border-radius:25px;
     font-size:18px;
     cursor:pointer;
-    font-weight:bold;
 }
 
-#surprise{
+#message{
     display:none;
     margin-top:30px;
-    background:rgba(255,255,255,0.15);
-    padding:25px;
-    border-radius:20px;
-}
-
-@keyframes fadeIn{
-    from{opacity:0;transform:translateY(20px);}
-    to{opacity:1;transform:translateY(0);}
+    font-size:20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<h1>🎂 Happy Birthday 🎂</h1>
 
-<h1>🎂 
+<p>I've got a small surprise for you 😊</p>
+
+<button onclick="showMessage()">
+Open Surprise ✨
+</button>
+
+<div id="message">
+    <h2>🌸 A Little Note 🌸</h2>
+
+    <p>
+       Wishing you a wonderful birthday filled with happiness,
+       laughter, success, and beautiful memories.
+    </p>
+
+    <p>
+       I'm glad our paths crossed. May the coming year bring
+       everything you're hoping for and more.
+    </p>
+
+    <p><b>Have an amazing birthday! 🎉</b></p>
+</div>
+
+<script>
+function showMessage() {
+   document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
